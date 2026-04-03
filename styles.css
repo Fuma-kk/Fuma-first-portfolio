@@ -1,5 +1,7 @@
+/*font*/
 @import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;600&display=swap');
 
+/*Colours*/
 :root {
     --white: white;
     --yellow: rgb(241, 235, 65);
@@ -7,10 +9,12 @@
     --card: rgba(255, 255, 255, 0.05);
 }
 
+/*Making navigation smoother, from peer evaluation*/
 html{
     scroll-behavior:smooth;
 }
 
+/*Font size, color and style*/
 body {
     font-family: 'Saira Semi Condensed', sans-serif;
     font-weight: 300;
@@ -19,11 +23,11 @@ body {
     font-weight: 600;
 }
 
+/*Top manu*/
 a {
     color: var(--white);
     text-decoration: none;
 }
-
 a:hover{
     text-decoration: underline;
 }
@@ -59,6 +63,7 @@ ul {
     margin-left: auto;
 }
 
+/*top page for mobile*/
 @media screen and (max-width: 768px) {
     .toppage ul {
         display: flex;
@@ -77,7 +82,7 @@ ul {
     }
 }
 
-
+/*Hero section*/
 header {
     background-image: url("https://cdn.dribbble.com/userupload/7421611/file/original-76241f0779738c53da71da9dcd863e16.png?resize=1200x900&vertical=center");
     position: relative;
@@ -93,6 +98,7 @@ header {
     margin-bottom: 50px;
 }
 
+/*Hero section for mobile*/
 @media screen and (max-width: 768px) {
     header {
         background-size: cover;
@@ -106,6 +112,7 @@ header {
     font-weight: 700;
 }
 
+/*My name in hero section, made it a bit smaller from peer evaluation*/
 .name {
     position: absolute;
     bottom: 50px;
@@ -117,6 +124,7 @@ header {
     letter-spacing: 0.2em;
 }
 
+/*IT student*/
 .role {
     position: absolute;
     bottom: 50px;
@@ -125,6 +133,7 @@ header {
     font-size: 4vw;
 }
 
+/*About me*/
 .maintop {
     display: flex;
     align-items: center;
@@ -140,6 +149,7 @@ header {
     margin: 0px;
 }
 
+/*The yellow line*/
 .yellow-line {
     flex-grow: 1;
     height: 3px;
@@ -147,6 +157,7 @@ header {
     border: none;
 }
 
+/*Grid for the 5 contents*/
 .cards-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -170,6 +181,7 @@ header {
     transition: 200ms
 }
 
+/*5 contents for monile, 1 column*/
 @media screen and (max-width: 768px) {
     .cards-container {
         grid-template-columns: 1fr;
@@ -177,6 +189,7 @@ header {
     }
 }
 
+/*Animation for mobile*/
 @media screen and (max-width: 768px) {
     .cards-container>div {
         opacity: 0;
@@ -200,6 +213,7 @@ header {
     }
 }
 
+/*Animation only when user can hover contents, made it symple from peer evaluation*/
 @media (hover: hover) {
     .cards-container>div:hover {
         transform: scale(1.15, 1.15);
@@ -211,7 +225,7 @@ header {
     }
 }
 
-
+/*Changing the order*/
 #Mission {
     grid-column: 2;
     grid-row: 1;
@@ -237,6 +251,7 @@ header {
     grid-row: 2;
 }
 
+/*Another order for mobile*/
 @media screen and (max-width: 768px) {
     #Mission {
         grid-column: 1;
@@ -264,7 +279,7 @@ header {
     }
 }
 
-
+/*Inside skill section*/
 .skillsgrid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -272,6 +287,7 @@ header {
     grid-gap: 15px;
 }
 
+/*Back to top button and copy right mark*/
 footer {
     display: flex;
     flex-direction: column;
