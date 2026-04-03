@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Saira+Semi+Condensed:wght@300;600&display=swap');
+
 :root {
     --white: white;
     --yellow: rgb(241, 235, 65);
@@ -5,15 +7,25 @@
     --card: rgba(255, 255, 255, 0.05);
 }
 
+html{
+    scroll-behavior:smooth;
+}
 
 body {
+    font-family: 'Saira Semi Condensed', sans-serif;
+    font-weight: 300;
     background-color: var(--black);
     color: var(--white);
+    font-weight: 600;
 }
 
 a {
     color: var(--white);
     text-decoration: none;
+}
+
+a:hover{
+    text-decoration: underline;
 }
 
 .toppage {
@@ -87,7 +99,6 @@ header {
         background-position: center;
         aspect-ratio: 9 / 8;
         margin-top: 0;
-
     }
 }
 
@@ -102,8 +113,8 @@ header {
     text-align: left;
     margin: 0;
     line-height: 1.2;
-    font-size: 7vw;
-    letter-spacing: 0.08em;
+    font-size: 6vw;
+    letter-spacing: 0.2em;
 }
 
 .role {
@@ -162,20 +173,44 @@ header {
 @media screen and (max-width: 768px) {
     .cards-container {
         grid-template-columns: 1fr;
-        width: 95%
+        width: 95%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .cards-container>div {
+        opacity: 0;
+        transform: translateY(40px) scale(0.8);
+        animation: fadein linear forwards;
+        animation-timeline: view();
+        animation-range: entry 0% cover 40%;
+        margin: 10px 0
+    }
+}
+
+@keyframes fadein {
+    from {
+        opacity: 0;
+        transform: translateY(40px) scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }
 
 @media (hover: hover) {
     .cards-container>div:hover {
-        transform: scale(1.1, 1.1);
+        transform: scale(1.15, 1.15);
     }
 
     .cards-container:hover>div:not(:hover) {
         transform: scale(0.9, 0.9);
-        filter: blur(2px);
+        
     }
 }
+
 
 #Mission {
     grid-column: 2;
@@ -250,6 +285,12 @@ footer a {
     justify-content: center;
     padding-bottom: 20px;
     font-size: clamp(15px, 2vw, 200px);
+    font-weight: 700;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
 }
 
 footer p {
